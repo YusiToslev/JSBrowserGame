@@ -151,7 +151,7 @@ class Enemy {
 
                     this.x -= 1.5; 
                 }
-                
+
                 break;
         }
 
@@ -294,7 +294,7 @@ function update() {
         endGame(true);
     }
 
-    // Update UI
+    
     document.getElementById('score').textContent = score;
     document.getElementById('health').textContent = health;
     document.getElementById('enemyCount').textContent = enemies.length;
@@ -306,7 +306,7 @@ function draw() {
     ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Draw game objects
+    
     player.draw();
 
     bullets.forEach(bullet => bullet.draw());
@@ -315,23 +315,27 @@ function draw() {
 
 
 function endGame(won = false) {
+
     gameRunning = false;
     document.getElementById('gameOver').style.display = 'block';
     document.getElementById('finalScore').textContent = score;
 
     if (won) {
+
         document.getElementById('winMessage').textContent = 'YOU WON!';
     } else {
+
         document.getElementById('winMessage').textContent = 'You were defeated!';
     }
 }
 
 
 function gameLoop() {
+    
     update();
     draw();
     requestAnimationFrame(gameLoop);
 }
 
-// Start the game
+
 gameLoop();
