@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    display: block;
+    background: #000000;
+}
+
+#gameInfo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #00ff00;
+    font-size: 18px;
+    z-index: 100;
+    font-weight: bold;
+}
+
+#gameOver {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: #00ff00;
+    padding: 40px;
+    border: 3px solid #00ff00;
+    text-align: center;
+    display: none;
+    z-index: 200;
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+#gameOver h1 {
+    font-size: 40px;
+    margin: 0 0 20px 0;
+}
+
+#gameOver p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#gameOver button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#gameOver button:hover {
+    background: #00cc00;
+}
